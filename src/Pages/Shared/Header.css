@@ -1,0 +1,29 @@
+.hoverStyle {
+    position: relative;
+    transition: all;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.hoverStyle:hover {
+    color: #57C78E;
+    transform: scale(1.1);
+}
+
+.hoverStyle::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #57C78E;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hoverStyle:hover::before {
+    transform: scaleX(1);
+}
