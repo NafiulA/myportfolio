@@ -7,12 +7,12 @@ import "./Header.css";
 
 const Header = () => {
     return (
-        <div class="navbar bg-[#2D2E32] text-white fixed z-50">
-            <div class="navbar-start">
-                <Link class="p-5 text-xl" to='/'>Nafiul Alam</Link>
+        <div className="navbar bg-[#2D2E32] text-white fixed z-50">
+            <div className="navbar-start">
+                <Link className="p-5 text-xl" to='/'>Nafiul Alam</Link>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="flex gap-5 text-sm p-0">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="flex gap-5 text-sm p-0">
                     <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
                     <li className='hoverStyle'><Link to="/home#services">Services</Link></li>
                     <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
@@ -20,12 +20,12 @@ const Header = () => {
                     <li className='hoverStyle'><Link to="/home#contact">Contact</Link></li>
                 </ul>
             </div>
-            <div class="navbar-end">
-                <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            <div className="navbar-end">
+                <div className="dropdown dropdown-end">
+                    <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content text-sm mt-3 p-2 shadow bg-[#2D2E32] rounded-box w-52">
+                    <ul tabIndex="0" className="menu menu-compact dropdown-content text-sm mt-3 p-2 shadow bg-[#2D2E32] rounded-box w-52">
                         <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
                         <li className='hoverStyle'><Link to="/home#services">Services</Link></li>
                         <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
