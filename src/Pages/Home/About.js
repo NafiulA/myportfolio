@@ -1,19 +1,25 @@
 import React from 'react';
+import "./About.css";
 
 const About = () => {
     return (
-        <div className='bg-[#25262A]'>
-            <div className='min-h-screen w-full lg:w-4/5 mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
-                <div>
-                    <div className=''>
-                        <p>Front-end Developer</p>
+        <div id='aboutme' className='bg-[#25262A]'>
+            <div className='min-h-screen w-full lg:w-3/4 mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
+                <div className='order-2 lg:order-1'>
+                    <div className='divHover h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white text-2xl p-5'>Front-end Development</p>
+                        <p className='text-sm text-gray-500 px-5 max-w-sm'>HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, ReactJS</p>
                     </div>
-                    <div><p>Full-stack Developer</p></div>
-                    <div>
-                        <p>Software Developer</p>
+                    <div className='divHover h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white text-2xl p-5'>Full-stack Development</p>
+                        <p className='text-sm text-gray-500 px-5 max-w-sm'>JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB</p>
+                    </div>
+                    <div className='divHover h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white text-2xl p-5'>Software Development</p>
+                        <p className='text-sm text-gray-500 px-5 max-w-sm'>Basic knowledge of C++, OOP, RDBMS, Networks</p>
                     </div>
                 </div>
-                <div className='px-5'>
+                <div className='px-5 order-1 lg:order-2'>
                     <div>
                         <p className='text-gray-400 py-3'>Introduction</p>
                     </div>

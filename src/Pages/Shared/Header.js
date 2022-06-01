@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
-import { Link } from 'react-router-dom';
 import "./Header.css";
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Header = () => {
     return (
@@ -14,7 +14,6 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5 text-sm p-0">
                     <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
-                    <li className='hoverStyle'><Link to="/home#services">Skills</Link></li>
                     <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
                     <li className='hoverStyle'><Link to="/home#blogs">Reviews</Link></li>
                     <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>

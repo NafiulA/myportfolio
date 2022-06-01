@@ -1,0 +1,3 @@
+.divHover:hover>p:first-child {
+    color: #57C78E
+}
