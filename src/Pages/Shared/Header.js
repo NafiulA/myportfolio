@@ -14,8 +14,9 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5 text-sm p-0">
                     <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
-                    <li className='hoverStyle'><Link to="/home#services">Services</Link></li>
+                    <li className='hoverStyle'><Link to="/home#services">Skills</Link></li>
                     <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
+                    <li className='hoverStyle'><Link to="/home#blogs">Reviews</Link></li>
                     <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
                     <li className='hoverStyle'><Link to="/home#contact">Contact</Link></li>
                 </ul>
