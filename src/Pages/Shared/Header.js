@@ -15,7 +15,7 @@ const Header = () => {
                 <ul className="flex gap-5 text-sm p-0">
                     <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
                     <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
-                    <li className='hoverStyle'><Link to="/home#blogs">Reviews</Link></li>
+                    <li className='hoverStyle'><Link to="/home#testimonial">Testimonials</Link></li>
                     <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
                     <li className='hoverStyle'><Link to="/home#contact">Contact</Link></li>
                 </ul>
