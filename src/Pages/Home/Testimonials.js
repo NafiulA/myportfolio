@@ -6,7 +6,7 @@ const Testimonials = () => {
             <div className='py-20 min-h-screen w-full lg:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
                 <div>
                     <div>
-                        <p className='text-4xl text-white '>Testimonials<span className='text-[#57C78E]'>.</span></p>
+                        <p className='text-4xl pb-5 text-white '>Testimonials<span className='text-[#57C78E]'>.</span></p>
                         <p className='text-gray-400 my-5'>If you have any advice or suggestions or thoughts on me, please feel free to leave a word. I would highly appreciate your words. </p>
                     </div>
 
