@@ -1,22 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import handwave from "../../assets/icons/handwave.png";
+import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
+import Modal from './Modal';
 const Contact = () => {
+    const { register, reset, handleSubmit, formState: { errors } } = useForm();
+    const [openModal, setOpenModal] = useState(false);
+    const [result, setResult] = useState("");
+
+    const onSubmit = data => {
+        const messageBody = {
+            user_name: data.user_name,
+            user_email: data.user_email,
+            message: data.message
+        }
+
+        emailjs.send('service_4kofdis', 'template_pk2f52s', messageBody, 'LLoWUEN5T1_ymARmU')
+            .then((result) => {
+                console.log(result)
+                setOpenModal(true);
+                setResult(result.text);
+                reset();
+            }, (error) => {
+                setOpenModal(true);
+                setResult(error.text);
+            });
+    };
+
     return (
         <div className='bg-[#25262A]'>
             <div className='min-h-screen py-20 w-full lg:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
-                <div>
+                <div className='px-3'>
                     <div className='text-4xl text-white'>
                         <p>Let's make something</p>
                         <p>amazing together<span className='text-[#57C78E]'>.</span></p>
                         <p className='my-5 flex'>Start by saying <span className='pl-4 text-[#57c78e]'>Hi!</span><span>
                             <img className='w-9' src={handwave} alt="" /></span></p>
                     </div>
+                    <div>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div className='my-3'>
+                                <input {...register("user_name", { required: "Your name is required" })} type="text" name="user_name" className='input input-sm w-full max-w-sm bg-transparent border-1 border-[#57C78E] text-gray-400 active:bg-transparent' placeholder='Your name' />
+                                {errors.user_name && <p className='text-sm text-red-500'>{errors.user_name.message}</p>}
+                            </div>
+                            <div className='my-3'>
+                                <input {...register("user_email", { required: "Your email is required" })} type="email" name="user_email" className='input input-sm w-full max-w-sm bg-transparent active:bg-transparent border-1 border-[#57C78E] text-gray-400' placeholder='Your email' />
+                                {errors.user_email && <p className='text-sm text-red-500'>{errors.user_email.message}</p>}
+                            </div>
+                            <div className='my-3'>
+                                <textarea {...register("message", { required: "Please include a message" })} type="text" name="message" className='textarea w-full max-w-sm bg-transparent border-1 border-[#57C78E] text-gray-400' style={{ "resize": "none" }} placeholder='Your message' />
+                                {errors.message && <p className='text-sm text-red-500'>{errors.message.message}</p>}
+                            </div>
+                            <input type="submit" value="Send" className='block max-w-fit text-[#57C78E] px-4 py-1 bg-[#2d2c32] rounded outline outline-1 outline-[#57C78E] hover:bg-[#57C78E] hover:text-white transition-all duration-300 ease-in-out cursor-pointer' />
+                        </form>
+                    </div>
                 </div>
                 <div>
 
                 </div>
             </div>
-
+            {openModal && <Modal
+                result={result} setOpenModal={setOpenModal} setResult={setResult}></Modal>}
         </div>
     );
 };
