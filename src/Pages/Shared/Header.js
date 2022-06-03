@@ -27,10 +27,10 @@ const Header = () => {
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content text-sm mt-3 p-2 shadow bg-[#2D2E32] rounded-box w-52">
                         <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
-                        <li className='hoverStyle'><Link to="/home#services">Services</Link></li>
                         <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
+                        <li className='hoverStyle'><Link to="/home#testimonial">Testimonial</Link></li>
                         <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
-                        <li className='hoverStyle'><Link to="/home#contact">Contact</Link></li>
+                        <li className='hoverStyle'><Link to="/home#contacts">Contact</Link></li>
                         <hr className='mx-4 my-3 bg-[#57C78E] border-none h-[2px]' />
                         <div>
                             <button className='bg-[#333438] flex items-center ml-4 mb-2 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>

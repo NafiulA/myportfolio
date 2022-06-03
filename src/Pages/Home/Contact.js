@@ -3,6 +3,8 @@ import handwave from "../../assets/icons/handwave.png";
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAt, faPhone, faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const [openModal, setOpenModal] = useState(false);
@@ -17,7 +19,6 @@ const Contact = () => {
 
         emailjs.send('service_4kofdis', 'template_pk2f52s', messageBody, 'LLoWUEN5T1_ymARmU')
             .then((result) => {
-                console.log(result)
                 setOpenModal(true);
                 setResult(result.text);
                 reset();
@@ -28,14 +29,14 @@ const Contact = () => {
     };
 
     return (
-        <div className='bg-[#25262A]'>
+        <div id='contacts' className='bg-[#25262A]'>
             <div className='min-h-screen py-20 w-full lg:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10'>
                 <div className='px-3'>
                     <div className='text-4xl text-white'>
                         <p>Let's make something</p>
                         <p>amazing together<span className='text-[#57C78E]'>.</span></p>
-                        <p className='my-5 flex'>Start by saying <span className='pl-4 text-[#57c78e]'>Hi!</span><span>
-                            <img className='w-9' src={handwave} alt="" /></span></p>
+                        <p className='my-5'>Start by saying <span className='text-[#57c78e]'>Hi!</span><span>
+                            <img className='w-9 inline' src={handwave} alt="" /></span></p>
                     </div>
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -55,8 +56,21 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                <div>
+                <div className='px-3'>
+                    <p className='text-gray-400 py-5'>Contact Info</p>
 
+                    <div className='bg-[#2D2E32] my-5 p-5 w-full flex items-center rounded-md text-xl text-white hover:text-[#57c78E] hover:-translate-y-2 hover:shadow-lg hover:shadow-[#57c78e]/50 transition-all duration-300 ease-in-out'>
+                        <FontAwesomeIcon className='text-[#57c78e]' icon={faAt}></FontAwesomeIcon>
+                        <p className='pl-3'>nafiulalam30@gmail.com</p>
+                    </div>
+                    <div className='bg-[#2D2E32] my-5 p-5 w-full flex items-center rounded-md text-xl text-white hover:text-[#57c78E] hover:-translate-y-2 hover:shadow-lg hover:shadow-[#57c78e]/50 transition-all duration-300 ease-in-out'>
+                        <FontAwesomeIcon className='text-[#57c78e]' icon={faPhone}></FontAwesomeIcon>
+                        <a href='tel:+8801323845385' className='pl-3'>+880-1323-845385</a>
+                    </div>
+                    <div className='bg-[#2D2E32] my-5 p-5 w-full flex items-center rounded-md text-xl text-white hover:text-[#57c78E] hover:-translate-y-2 hover:shadow-lg hover:shadow-[#57c78e]/50 transition-all duration-300 ease-in-out'>
+                        <FontAwesomeIcon className='text-[#57c78e]' icon={faLocationCrosshairs}></FontAwesomeIcon>
+                        <p className='pl-3'>Dhaka, Bangladesh</p>
+                    </div>
                 </div>
             </div>
             {openModal && <Modal
