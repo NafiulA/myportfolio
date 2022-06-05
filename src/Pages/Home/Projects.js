@@ -7,7 +7,7 @@ import gymwhale from "../../assets/images/gymwhale.png";
 
 const Projects = () => {
     return (
-        <div id='projects' className='bg-[#25262A] py-10'>
+        <div id='projects' className='bg-[#25262A] py-20'>
             <div className='min-h-screen w-full lg:w-4/5 mx-auto grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center items-center'>
                 <div>
                     <p className='text-3xl text-white border-b py-2 my-16 border-[#57C78E]'>Latest Projects</p>

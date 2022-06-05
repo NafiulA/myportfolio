@@ -6,18 +6,23 @@ import "./Header.css";
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Header = () => {
+    const menu = <>
+        <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
+        <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
+        <li className='hoverStyle'><Link to="/home#testimonial">Testimonial</Link></li>
+        <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
+        <li className='hoverStyle'><Link to="/home#contacts">Contact</Link></li>
+        <li className='hoverStyle'><Link to="/dashboard">Dashboard</Link></li>
+
+    </>
     return (
-        <div className="navbar bg-[#2D2E32] text-white fixed z-50">
+        <div className="navbar bg-[#2D2E32] text-white sticky top-0 z-50">
             <div className="navbar-start">
                 <Link className="p-5 text-xl" to='/'>Nafiul Alam</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5 text-sm p-0">
-                    <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
-                    <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
-                    <li className='hoverStyle'><Link to="/home#testimonial">Testimonials</Link></li>
-                    <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
-                    <li className='hoverStyle'><Link to="/home#contact">Contact</Link></li>
+                    {menu}
                 </ul>
             </div>
             <div className="navbar-end">
@@ -26,11 +31,7 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content text-sm mt-3 p-2 shadow bg-[#2D2E32] rounded-box w-52">
-                        <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
-                        <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
-                        <li className='hoverStyle'><Link to="/home#testimonial">Testimonial</Link></li>
-                        <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
-                        <li className='hoverStyle'><Link to="/home#contacts">Contact</Link></li>
+                        {menu}
                         <hr className='mx-4 my-3 bg-[#57C78E] border-none h-[2px]' />
                         <div>
                             <button className='bg-[#333438] flex items-center ml-4 mb-2 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
