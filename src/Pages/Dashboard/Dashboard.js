@@ -8,7 +8,7 @@ const Dashboard = () => {
         <div>
             <div class="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col bg-[#2D2E32] border-t-2 border-[#57c78e]">
+                <div class="drawer-content flex flex-col bg-[#16191E]">
                     <div className='flex justify-between p-5'>
                         <h3 className='text-2xl text-white'>Welcome to your Dashboard</h3>
                         <div>

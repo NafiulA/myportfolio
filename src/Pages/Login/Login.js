@@ -1,30 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import auth from '../../firebase.init';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Loading from '../Shared/Loading';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Shared/Footer';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
+    const [error, setError] = useState({})
     const navigate = useNavigate();
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [signInWithFacebook, fUser, fLoading, fError] = useSignInWithFacebook(auth);
+
+    const [token] = useToken(gUser || fUser)
 
     useEffect(() => {
-        if (user) {
+        if (token) {
             navigate("/dashboard");
         }
-    }, [user, navigate])
+    }, [token, navigate])
 
-    if (loading) {
+    if (gLoading || fLoading) {
         <Loading></Loading>
     }
     const handleGoogleSignin = () => {
         signInWithGoogle();
 
-        if (error) {
-            console.log(error);
+        if (gError) {
+            setError(gError);
+        }
+    }
+    const handleFacebookSignin = () => {
+        signInWithFacebook();
+
+        if (fError) {
+            setError(fError);
         }
     }
 
@@ -42,12 +54,13 @@ const Login = () => {
                             <span className='mx-3 text-[#57c78e]'>Or</span>
                             <hr className='h-px w-1/3 bg-[#57c78e] border-none' />
                         </div>
-                        <button className='flex items-center bg-[#57c78E] text-white rounded-md p-2 hover:bg-transparent hover:text-[#57c78e] transition-all duration-300 ease-in-out'>
+                        <button onClick={handleFacebookSignin} className='flex items-center bg-[#57c78E] text-white rounded-md p-2 hover:bg-transparent hover:text-[#57c78e] transition-all duration-300 ease-in-out'>
                             <p>Continue with Facebook
                                 <FontAwesomeIcon className='pl-2' icon={faFacebook}></FontAwesomeIcon></p>
                         </button>
                     </div>
                 </div>
+                {error && <p>{error.message}</p>}
             </div>
             <Footer></Footer>
         </div>
