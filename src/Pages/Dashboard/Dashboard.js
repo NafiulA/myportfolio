@@ -30,9 +30,9 @@ const Dashboard = () => {
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-hidden w-60 bg-[#25262A] text-white">
 
-                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/addtestimony">Add Testimony</Link></li>
-                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/mytestimonies">My Testimonies</Link></li>
-                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/alltestimonials">All Testimonials</Link></li>
+                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/dashboard">Add Testimony</Link></li>
+                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/dashboard/mytestimonies">My Testimonies</Link></li>
+                        <li className='bg-[#57c78e] rounded-full my-2'><Link to="/dashboard/alltestimonials">All Testimonials</Link></li>
                         <li className='bg-[#57c78e] rounded-full my-2'><button className='flex justify-between' onClick={handleLogout}>
                             <p>Log Out</p>
                             <FontAwesomeIcon icon={faPowerOff}></FontAwesomeIcon></button></li>
