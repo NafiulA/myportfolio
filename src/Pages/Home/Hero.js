@@ -3,7 +3,7 @@ import portfolio from "../../assets/images/portfolio.png";
 
 const Hero = () => {
     return (
-        <div className='h-[90vh] bg-[#2D2E32]'>
+        <div id='top' className='h-[90vh] bg-[#2D2E32]'>
             <div className='w-full md:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center'>
                 <div className='order-2 lg:order-1 px-3 lg:mt-10'>
                     <div className='max-w-fit bg-[#57C78E] rounded-md'>
@@ -14,7 +14,7 @@ const Hero = () => {
                     </div>
 
                     <div className='mt-2 text-gray-400'>
-                        <p className='py-5'>I build beautiful, eye-catching web apps utilizing the technologies I keep learning everyday.</p>
+                        <p className='py-5'>I build beautiful &#38; powerful web apps utilizing the technologies I keep learning everyday.</p>
                     </div>
                     <div className='my-10'>
                         <p className='text-2xl text-[#57C78E] border-b-2 max-w-fit border-[#57C78E] hover:scale-105 transition duration-150 ease-in cursor-pointer'>Let's chat</p>

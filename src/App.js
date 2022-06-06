@@ -8,6 +8,8 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import AddTestimony from './Pages/Dashboard/AddTestimony';
 import MyTestimonies from './Pages/Dashboard/MyTestimonies';
 import AllTestimonials from './Pages/Dashboard/AllTestimonials';
+import RequireAuth from './Pages/Login/RequireAuth';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -17,13 +19,25 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}>
-          <Route path='addtestimony' element={<AddTestimony></AddTestimony>}></Route>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+          <Route index element={<AddTestimony></AddTestimony>}></Route>
           <Route path='mytestimony' element={<MyTestimonies></MyTestimonies>}></Route>
           <Route path='alltestimonials' element={<AllTestimonials></AllTestimonials>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            backgroundColor: "#25262A",
+            color: "white",
+            padding: "8px",
+            borderRadius: "24px"
+          }
+        }}
+      />
     </div>
   );
 }

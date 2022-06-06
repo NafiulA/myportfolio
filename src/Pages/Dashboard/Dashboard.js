@@ -1,9 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightFromBracket, faPowerOff } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
 
 const Dashboard = () => {
+    const handleLogout = () => {
+        signOut(auth);
+        localStorage.removeItem("accessToken");
+    }
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -27,6 +33,9 @@ const Dashboard = () => {
                         <li className='bg-[#57c78e] rounded-full my-2'><Link to="/addtestimony">Add Testimony</Link></li>
                         <li className='bg-[#57c78e] rounded-full my-2'><Link to="/mytestimonies">My Testimonies</Link></li>
                         <li className='bg-[#57c78e] rounded-full my-2'><Link to="/alltestimonials">All Testimonials</Link></li>
+                        <li className='bg-[#57c78e] rounded-full my-2'><button className='flex justify-between' onClick={handleLogout}>
+                            <p>Log Out</p>
+                            <FontAwesomeIcon icon={faPowerOff}></FontAwesomeIcon></button></li>
                     </ul>
 
                 </div>

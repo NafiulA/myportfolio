@@ -4,21 +4,24 @@ import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
 import "./Header.css";
 import { HashLink as Link } from 'react-router-hash-link';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
     const menu = <>
         <li className='hoverStyle'><Link to="/home#aboutme">About Me</Link></li>
         <li className='hoverStyle'><Link to="/home#projects">Projects</Link></li>
         <li className='hoverStyle'><Link to="/home#testimonial">Testimonial</Link></li>
         <li className='hoverStyle'><Link to="/home#blogs">Blogs</Link></li>
         <li className='hoverStyle'><Link to="/home#contacts">Contact</Link></li>
-        <li className='hoverStyle'><Link to="/dashboard">Dashboard</Link></li>
+        {user && <li className='hoverStyle'><Link to="/dashboard">Dashboard</Link></li>}
 
     </>
     return (
         <div className="navbar bg-[#2D2E32] text-white sticky top-0 z-50">
             <div className="navbar-start">
-                <Link className="p-5 text-xl" to='/'>Nafiul Alam</Link>
+                <Link className="p-5 text-xl" to='/home#top'>Nafiul Alam</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex gap-5 text-sm p-0">
