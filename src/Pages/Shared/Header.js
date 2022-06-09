@@ -29,6 +29,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <button className='bg-[#333438] flex items-center mr-4 p-2 text-xs lg:hidden rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
+                    <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
+                    <p className='pl-2'>My Resume</p>
+                </button>
                 <div className="dropdown dropdown-end">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -44,10 +48,6 @@ const Header = () => {
                             <button className='bg-[#333438] flex items-center ml-4 mb-2 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
                                 <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
                                 <p className='pl-2'>LinkedIn</p>
-                            </button>
-                            <button className='bg-[#333438] flex items-center ml-4 mb-2 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
-                                <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
-                                <p className='pl-2'>My Resume</p>
                             </button>
                         </div>
 

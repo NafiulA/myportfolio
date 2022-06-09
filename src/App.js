@@ -10,6 +10,7 @@ import MyTestimonies from './Pages/Dashboard/MyTestimonies';
 import AllTestimonials from './Pages/Dashboard/AllTestimonials';
 import RequireAuth from './Pages/Login/RequireAuth';
 import { Toaster } from 'react-hot-toast';
+import RequireAdmin from './Pages/Login/RequireAdmin';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index element={<AddTestimony></AddTestimony>}></Route>
           <Route path='mytestimonies' element={<MyTestimonies></MyTestimonies>}></Route>
-          <Route path='alltestimonials' element={<AllTestimonials></AllTestimonials>}></Route>
+          <Route path='alltestimonials' element={<RequireAdmin><AllTestimonials></AllTestimonials></RequireAdmin>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

@@ -5,7 +5,6 @@ const MytestimoniesRow = ({ testimony, index, setDltModal }) => {
         <tr className='text-white'>
             <th>{index + 1}</th>
             <td>{testimony.name}</td>
-            <td>{testimony.email}</td>
             <td>{testimony.testimony}</td>
             <td className='py-2'><label onClick={() => setDltModal(testimony)} for="myTestimonyDltModal" className='p-1 rounded-full bg-red-500'>Delete</label></td>
         </tr>
