@@ -44,8 +44,8 @@ const Login = () => {
     return (
         <div className='bg-[#2D2E32]'>
             <div className='min-h-[90vh] flex justify-center items-center'>
-                <div class="card w-full max-w-sm bg-[#25262A] shadow-md shadow-[#57c78e]">
-                    <div class="card-body">
+                <div className="card w-full max-w-sm bg-[#25262A] shadow-md shadow-[#57c78e]">
+                    <div className="card-body">
                         <button disabled={access} onClick={handleGoogleSignin} className='flex items-center bg-[#57c78E] text-white rounded-md p-2 hover:bg-transparent hover:text-[#57c78e] transition-all duration-300 ease-in-out'>
                             <p>Continue with Google
                                 <FontAwesomeIcon className='pl-2' icon={faGoogle}></FontAwesomeIcon></p>
@@ -59,10 +59,10 @@ const Login = () => {
                             <p>Continue with Facebook
                                 <FontAwesomeIcon className='pl-2' icon={faFacebook}></FontAwesomeIcon></p>
                         </button>
-                        <div class="form-control mt-2">
-                            <label htmlFor='access' class="label cursor-pointer max-w-fit">
-                                <input onChange={() => { setAccess(!access) }} type="checkbox" class="checkbox checkbox-sm bg-white" />
-                                <span class="label-text text-white pl-2 text-xs">By logging in, you'll be giving access to your user name, email and display picture. If you agree to this, please check the box and proceed. </span>
+                        <div className="form-control mt-2">
+                            <label htmlFor='access' className="label cursor-pointer max-w-fit">
+                                <input onChange={() => { setAccess(!access) }} type="checkbox" className="checkbox checkbox-sm bg-white" />
+                                <span className="label-text text-white pl-2 text-xs">By logging in, you'll be giving access to your user name, email and display picture. If you agree to this, please check the box and proceed. </span>
                             </label>
                         </div>
                         {error && <p>{error.message}</p>}

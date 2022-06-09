@@ -20,13 +20,13 @@ const Dashboard = () => {
     }
     return (
         <div>
-            <div class="drawer drawer-mobile">
-                <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content flex flex-col bg-[#16191E]">
+            <div className="drawer drawer-mobile">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content flex flex-col bg-[#16191E]">
                     <div className='flex justify-between p-5'>
                         <h3 className='text-2xl text-white'>Welcome to your Dashboard</h3>
                         <div>
-                            <label for="my-drawer-2" class=" p-2 bg-[#57c78E] rounded-full lg:hidden">
+                            <label for="my-drawer-2" className=" p-2 bg-[#57c78E] rounded-full lg:hidden">
                                 <FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon>
                             </label>
                         </div>
@@ -34,9 +34,9 @@ const Dashboard = () => {
                     <Outlet></Outlet>
 
                 </div>
-                <div class="drawer-side">
-                    <label for="my-drawer-2" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-hidden w-60 bg-[#25262A] text-white">
+                <div className="drawer-side">
+                    <label for="my-drawer-2" className="drawer-overlay"></label>
+                    <ul className="menu p-4 overflow-hidden w-60 bg-[#25262A] text-white">
 
                         {!admin && <>
                             <li className='bg-[#57c78e] rounded-full my-2'><Link to="/dashboard">Add Testimony</Link></li>

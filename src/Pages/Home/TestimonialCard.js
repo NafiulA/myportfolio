@@ -2,12 +2,12 @@ import React from 'react';
 
 const TestimonialCard = ({ testimonial }) => {
     return (
-        <div class="card w-full bg-[#2D2E32] shadow-xl">
-            <div class="p-5">
+        <div className="card w-full bg-[#2D2E32] shadow-xl">
+            <div className="p-5">
                 <p className='my-3'>{testimonial.testimony}</p>
                 <div className='flex justify-end items-center'>
-                    <div class="avatar">
-                        <div class="w-10 rounded-full ring ring-[#57c78e]">
+                    <div className="avatar">
+                        <div className="w-10 rounded-full ring ring-[#57c78e]">
                             <img src={testimonial.photo} alt="" referrerPolicy="no-referrer" />
                         </div>
                     </div>

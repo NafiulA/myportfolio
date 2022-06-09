@@ -20,8 +20,8 @@ const MyTestimonies = () => {
 
     return (
         <div className='p-5'>
-            <div class="overflow-x-auto rounded-xl">
-                <table class="border-collapse table-auto text-center lg:w-full">
+            <div className="overflow-x-auto rounded-xl">
+                <table className="border-collapse table-auto text-center lg:w-full">
                     <thead className='bg-[#2D2E32] text-gray-400'>
                         <tr>
                             <th className='w-16 px-4'>#</th>

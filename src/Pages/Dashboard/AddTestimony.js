@@ -41,18 +41,18 @@ const AddTestimony = () => {
         <div className='p-5'>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div class="form-control max-w-sm my-5">
-                        <label class="input-group input-group-vertical">
+                    <div className="form-control max-w-sm my-5">
+                        <label className="input-group input-group-vertical">
                             <span className='bg-[#25262A] text-gray-400'>Your Name</span>
-                            <input type="text" disabled defaultValue={user.displayName} class="input disabled:border-0 disabled:bg-[#2D2E32] disabled:text-white" />
+                            <input type="text" disabled defaultValue={user.displayName} className="input disabled:border-0 disabled:bg-[#2D2E32] disabled:text-white" />
                         </label>
                     </div>
-                    <div class="form-control max-w-sm my-5">
-                        <label class="input-group input-group-vertical">
+                    <div className="form-control max-w-sm my-5">
+                        <label className="input-group input-group-vertical">
                             <span className='bg-[#25262A] text-gray-400'>Your Testimony</span>
                             <textarea {...register("testimony", {
                                 required: "Please write your testimony"
-                            })} type="text" class="textarea border-0 bg-[#2D2E32] text-white" />
+                            })} type="text" className="textarea border-0 bg-[#2D2E32] text-white" />
                         </label>
                     </div>
                     {errors && <p className='text-red-500'>{errors?.testimony?.message}</p>}
