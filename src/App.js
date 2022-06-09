@@ -11,6 +11,7 @@ import AllTestimonials from './Pages/Dashboard/AllTestimonials';
 import RequireAuth from './Pages/Login/RequireAuth';
 import { Toaster } from 'react-hot-toast';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import Privacy from './Pages/Shared/Privacy';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='mytestimonies' element={<MyTestimonies></MyTestimonies>}></Route>
           <Route path='alltestimonials' element={<RequireAdmin><AllTestimonials></AllTestimonials></RequireAdmin>}></Route>
         </Route>
+        <Route path='/privacypolicy' element={<Privacy></Privacy>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Toaster

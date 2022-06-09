@@ -6,11 +6,13 @@ import Modal from './Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faPhone, faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
+    const [sending, setSending] = useState(false);
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const [openModal, setOpenModal] = useState(false);
     const [result, setResult] = useState("");
 
     const onSubmit = data => {
+        setSending(true);
         const messageBody = {
             user_name: data.user_name,
             user_email: data.user_email,
@@ -19,10 +21,12 @@ const Contact = () => {
 
         emailjs.send('service_4kofdis', 'template_pk2f52s', messageBody, 'LLoWUEN5T1_ymARmU')
             .then((result) => {
+                setSending(false);
                 setOpenModal(true);
                 setResult(result.text);
                 reset();
             }, (error) => {
+                setSending(false);
                 setOpenModal(true);
                 setResult(error.text);
             });
@@ -52,7 +56,10 @@ const Contact = () => {
                                 <textarea {...register("message", { required: "Please include a message" })} type="text" name="message" className='textarea w-full max-w-sm bg-transparent border-1 border-[#57C78E] text-gray-400' style={{ "resize": "none" }} placeholder='Your message' />
                                 {errors.message && <p className='text-sm text-red-500'>{errors.message.message}</p>}
                             </div>
-                            <input type="submit" value="Send" className='block max-w-fit text-[#57C78E] px-4 py-1 bg-[#2d2c32] rounded outline outline-1 outline-[#57C78E] hover:bg-[#57C78E] hover:text-white transition-all duration-300 ease-in-out cursor-pointer' />
+                            {sending ? <button disabled className='block max-w-fit text-[#57C78E] px-4 py-1 bg-[#2d2c32] rounded outline outline-1 outline-[#57C78E] cursor-pointer'>
+                                Sending...
+                            </button>
+                                : <input type="submit" value="Send" className='block max-w-fit text-[#57C78E] px-4 py-1 bg-[#2d2c32] rounded outline outline-1 outline-[#57C78E] hover:bg-[#57C78E] hover:text-white transition-all duration-300 ease-in-out cursor-pointer' />}
                         </form>
                     </div>
                 </div>

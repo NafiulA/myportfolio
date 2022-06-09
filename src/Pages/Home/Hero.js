@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 import portfolio from "../../assets/images/portfolio.png";
 
 const Hero = () => {
@@ -17,7 +18,7 @@ const Hero = () => {
                         <p className='py-5'>I build beautiful &#38; powerful web apps utilizing the technologies I keep learning everyday.</p>
                     </div>
                     <div className='my-10'>
-                        <p className='text-2xl text-[#57C78E] border-b-2 max-w-fit border-[#57C78E] hover:scale-105 transition duration-150 ease-in cursor-pointer'>Let's chat</p>
+                        <HashLink to="/home#contacts" className='text-2xl text-[#57C78E] border-b-2 max-w-fit border-[#57C78E] hover:scale-105 transition duration-150 ease-in cursor-pointer'>Let's chat</HashLink>
                     </div>
                 </div>
                 <div className='order-1 lg:order-2'>

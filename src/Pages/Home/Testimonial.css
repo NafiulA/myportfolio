@@ -1,0 +1,20 @@
+.testimonialWindow {
+    scroll-behavior: smooth;
+}
+
+.testimonialWindow::-webkit-scrollbar {
+    width: 5px;
+}
+
+.testimonialWindow::-webkit-scrollbar-button {
+    display: none;
+}
+
+.testimonialWindow::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.testimonialWindow::-webkit-scrollbar-thumb {
+    background-color: #57c78e;
+    border-radius: 10px;
+}

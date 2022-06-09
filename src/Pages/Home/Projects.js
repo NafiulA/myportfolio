@@ -4,19 +4,22 @@ import React from 'react';
 import manufacturehut from "../../assets/images/manufacturehut.png";
 import stockpile from "../../assets/images/stockpile.png";
 import gymwhale from "../../assets/images/gymwhale.png";
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+    const navigate = useNavigate();
     return (
         <div id='projects' className='bg-[#25262A] py-20'>
             <div className='min-h-screen w-full lg:w-4/5 mx-auto grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-10 justify-items-center items-center'>
-                <div>
-                    <p className='text-3xl text-white border-b py-2 my-16 border-[#57C78E]'>Latest Projects</p>
+                <div className='h-40 flex justify-items-center items-center'>
+                    <p className='text-3xl text-white border-b py-2 border-[#57C78E]'>Latest Projects</p>
                 </div>
                 <div className='row-span-2 bg-[#2D3037] p-10 rounded-lg w-full'>
                     <div>
                         <div className='flex items-start lg:items-center justify-between gap-4 mb-3'>
                             <div className='flex items-center'>
-                                <p className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>ManufactureHut</p>
+                                <a href='https://manufacturehut.web.app/'
+                                    target="_blank" rel="noreferrer" className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>ManufactureHut</a>
                                 <FontAwesomeIcon className='text-[#57C78E]' icon={faArrowUpRightFromSquare}></FontAwesomeIcon>
                             </div>
                             <div className='flex flex-wrap'>
@@ -28,11 +31,11 @@ const Projects = () => {
                         </div>
 
                         <div className='mb-3'>
-                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='#s'><span className='mr-2'>Client Repo
+                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='https://github.com/NafiulA/manufacturehut-client-side' target="_blank" rel="noreferrer"><span className='mr-2'>Client Repo
                             </span>
                                 <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
                             </a>
-                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='#s'><span className='mr-2'>Server Repo
+                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='https://github.com/NafiulA/manufacturehut-server-side' target="_blank" rel="noreferrer"><span className='mr-2'>Server Repo
                             </span>
                                 <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
                             </a>
@@ -47,7 +50,7 @@ const Projects = () => {
                     <div>
                         <div className='flex items-start lg:items-center justify-between gap-4 mb-3'>
                             <div className='flex items-center'>
-                                <p className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>Stockpile</p>
+                                <a href='https://stockpile-2e1cb.web.app/' target="_blank" rel="noreferrer" className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>Stockpile</a>
                                 <FontAwesomeIcon className='text-[#57C78E]' icon={faArrowUpRightFromSquare}></FontAwesomeIcon>
                             </div>
                             <div className='flex flex-wrap'>
@@ -59,11 +62,11 @@ const Projects = () => {
                         </div>
 
                         <div className='mb-3'>
-                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='#s'><span className='mr-2'>Client Repo
+                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='https://github.com/NafiulA/stockpile-client-side' target="_blank" rel="noreferrer"><span className='mr-2'>Client Repo
                             </span>
                                 <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
                             </a>
-                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='#s'><span className='mr-2'>Server Repo
+                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='https://github.com/NafiulA/stockpile-server-side' target="_blank" rel="noreferrer"><span className='mr-2'>Server Repo
                             </span>
                                 <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
                             </a>
@@ -78,7 +81,7 @@ const Projects = () => {
                     <div>
                         <div className='flex items-start lg:items-center justify-between mb-3 gap-4'>
                             <div className='flex items-center'>
-                                <p className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>Gymwhale</p>
+                                <a href='https://gym-trainer-634e1.web.app/' target="_blank" rel="noreferrer" className='mr-2 text-2xl text-white hover:text-[#57C78E] transition-all duration-300'>Gymwhale</a>
                                 <FontAwesomeIcon className='text-[#57C78E]' icon={faArrowUpRightFromSquare}></FontAwesomeIcon>
                             </div>
                             <div className='flex flex-wrap'>
@@ -89,7 +92,7 @@ const Projects = () => {
                         </div>
 
                         <div className='mb-3'>
-                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='#s'><span className='mr-2'>Client Repo
+                            <a className='px-2 rounded-full bg-slate-700 text-sm text-gray-400 mr-2 hover:text-[#57C78E] transition-all duration-300 ease-in-out' href='https://github.com/NafiulA/gymwhale-client-side' target="_blank" rel="noreferrer"><span className='mr-2'>Client Repo
                             </span>
                                 <FontAwesomeIcon icon={faLink}></FontAwesomeIcon>
                             </a>
@@ -100,8 +103,8 @@ const Projects = () => {
                         <img className='rounded-lg' src={gymwhale} alt="" />
                     </div>
                 </div>
-                <div>
-                    <button className='p-2 my-16 text-[#57C78E] bg-[#2D2E32] text-2xl rounded-md flex items-center hover:bg-[#16191E] hover:text-white transition-all duration-300 ease-in-out'>
+                <div className='h-40 flex justify-items-center items-center'>
+                    <button onClick={() => { navigate("/allprojects") }} className='p-2 text-[#57C78E] bg-[#2D2E32] text-2xl rounded-md flex items-center hover:bg-[#16191E] hover:text-white transition-all duration-300 ease-in-out'>
                         <p className='mr-3'>Checkout More</p>
                         <FontAwesomeIcon icon={faUpRightFromSquare}></FontAwesomeIcon>
                     </button>
