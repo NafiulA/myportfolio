@@ -7,7 +7,7 @@ import MytestimoniesRow from './MytestimoniesRow';
 import MyTestimonyDltModal from './MyTestimonyDltModal';
 
 const MyTestimonies = () => {
-    const [dltModal, setDltModal] = useState(false);
+    const [dltModal, setDltModal] = useState(null);
     const [user, loading] = useAuthState(auth);
     const { data: testimonies, isLoading, refetch } = useQuery("testimonies", () => fetch(`http://localhost:5000/reviews/${user.email}`, {
         headers: {
@@ -37,7 +37,7 @@ const MyTestimonies = () => {
                     </tbody>
                 </table>
             </div>
-            {dltModal && <MyTestimonyDltModal setDltModal={setDltModal}></MyTestimonyDltModal>}
+            {dltModal && <MyTestimonyDltModal dltModal={dltModal} setDltModal={setDltModal} refetch={refetch}></MyTestimonyDltModal>}
         </div>
     );
 };
