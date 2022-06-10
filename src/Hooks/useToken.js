@@ -10,7 +10,7 @@ const useToken = user => {
             name: name
         };
         if (email) {
-            fetch("http://localhost:5000/user", {
+            fetch("https://blooming-badlands-86390.herokuapp.com/user", {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

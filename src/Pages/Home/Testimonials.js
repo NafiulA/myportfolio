@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const Testimonials = () => {
     const navigate = useNavigate();
     const { data: testimonials, isLoading } = useQuery("testimonials", () =>
-        fetch("http://localhost:5000/reviews").then(res => res.json())
+        fetch("https://blooming-badlands-86390.herokuapp.com/reviews").then(res => res.json())
     );
 
     if (isLoading) {
