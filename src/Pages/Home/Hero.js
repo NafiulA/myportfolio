@@ -4,7 +4,7 @@ import portfolio from "../../assets/images/portfolio.png";
 
 const Hero = () => {
     return (
-        <div id='top' className='h-[90vh] bg-[#2D2E32]'>
+        <div id='top' className='min-h-[90vh] bg-[#2D2E32]'>
             <div className='w-full md:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center'>
                 <div className='order-2 lg:order-1 px-3 lg:mt-10'>
                     <div className='max-w-fit bg-[#57C78E] rounded-md'>
@@ -23,7 +23,7 @@ const Hero = () => {
                 </div>
                 <div className='order-1 lg:order-2'>
                     <div className='static h-min mt-20 lg:mt-0 lg:relative lg:h-[90vh]'>
-                        <img className='static lg:absolute lg:bottom-0' src={portfolio} alt="" />
+                        <img className='static w-full lg:absolute lg:bottom-0' src={portfolio} alt="" />
                     </div>
                 </div>
             </div>
