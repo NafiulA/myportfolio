@@ -2,7 +2,7 @@ import React from 'react';
 
 const TestimonialCard = ({ testimonial }) => {
     return (
-        <div className="card w-full bg-[#2D2E32] shadow-xl">
+        <div data-aos="fade-up" data-aos-delay="300" className="card w-full bg-[#2D2E32] shadow-xl">
             <div className="p-5">
                 <p className='my-3'>{testimonial.testimony}</p>
                 <div className='flex justify-end items-center'>

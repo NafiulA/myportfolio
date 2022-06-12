@@ -14,7 +14,7 @@ const Projects = () => {
                 <div className='h-40 flex justify-items-center items-center'>
                     <p className='text-3xl text-white border-b py-2 border-[#57C78E]'>Latest Projects</p>
                 </div>
-                <div className='row-span-2 bg-[#2D3037] p-10 rounded-lg w-full'>
+                <div data-aos="fade-left" className='row-span-2 bg-[#2D3037] p-10 rounded-lg w-full'>
                     <div>
                         <div className='flex items-start lg:items-center justify-between gap-4 mb-3'>
                             <div className='flex items-center'>
@@ -46,7 +46,7 @@ const Projects = () => {
                         <img className='rounded-lg' src={manufacturehut} alt="" />
                     </div>
                 </div>
-                <div className='row-span-2 bg-[#181B2C] p-10 rounded-lg w-full'>
+                <div data-aos="fade-right" className='row-span-2 bg-[#181B2C] p-10 rounded-lg w-full'>
                     <div>
                         <div className='flex items-start lg:items-center justify-between gap-4 mb-3'>
                             <div className='flex items-center'>
@@ -77,7 +77,7 @@ const Projects = () => {
                         <img className='rounded-lg' src={stockpile} alt="" />
                     </div>
                 </div>
-                <div className='row-span-2 bg-[#16191E] p-10 rounded-lg w-full'>
+                <div data-aos="fade-left" className='row-span-2 bg-[#16191E] p-10 rounded-lg w-full'>
                     <div>
                         <div className='flex items-start lg:items-center justify-between mb-3 gap-4'>
                             <div className='flex items-center'>

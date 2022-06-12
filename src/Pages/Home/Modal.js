@@ -14,7 +14,7 @@ const Modal = ({ result, setOpenModal, setResult }) => {
                         <h3 className="font-bold text-lg text-white">Message sent!</h3>
                         <p className="py-4 text-gray-400">Thank you for contacting me!</p>
                         <div className="modal-action">
-                            <label onClick={handleSubmit} for="Contactmodal" className="btn btn-sm bg-[#57c78e]">Yay!</label>
+                            <label onClick={handleSubmit} htmlFor="Contactmodal" className="btn btn-sm bg-[#57c78e]">Yay!</label>
                         </div>
                     </>}
                     {result !== "OK" && <>

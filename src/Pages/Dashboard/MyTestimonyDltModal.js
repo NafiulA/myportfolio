@@ -29,7 +29,7 @@ const MyTestimonyDltModal = ({ dltModal, setDltModal, refetch }) => {
                     <h3 className="font-bold text-lg text-gray-400">Are you sure you want to delete this testimony?</h3>
                     <div className="modal-action">
                         <button onClick={handleDelete} className='py-1 px-3 rounded text-white bg-[#57c78e]'>Yes</button>
-                        <label onClick={() => setDltModal(null)} for="myTestimonyDltModal" className="p-1 rounded text-white bg-red-500">Cancel</label>
+                        <label onClick={() => setDltModal(null)} htmlFor="myTestimonyDltModal" className="p-1 rounded text-white bg-red-500">Cancel</label>
                     </div>
                 </div>
             </div>

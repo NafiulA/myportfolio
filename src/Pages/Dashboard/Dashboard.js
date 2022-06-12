@@ -26,7 +26,7 @@ const Dashboard = () => {
                     <div className='flex justify-between p-5'>
                         <h3 className='text-2xl text-white'>Welcome to your Dashboard</h3>
                         <div>
-                            <label for="my-drawer-2" className=" p-2 bg-[#57c78E] rounded-full lg:hidden">
+                            <label htmlFor="my-drawer-2" className=" p-2 bg-[#57c78E] rounded-full lg:hidden">
                                 <FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon>
                             </label>
                         </div>
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
                 </div>
                 <div className="drawer-side">
-                    <label for="my-drawer-2" className="drawer-overlay"></label>
+                    <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-hidden w-60 bg-[#25262A] text-white">
 
                         {!admin && <>

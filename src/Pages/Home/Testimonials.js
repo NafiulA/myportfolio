@@ -28,7 +28,7 @@ const Testimonials = () => {
                         <button onClick={() => { navigate("/login") }} className='text-xl p-2 my-5 bg-[#25262A] text-white rounded-md hover:bg-[#2D2E32] outline outline-[#57c78e] outline-1 hover:text-[#57C78E] hover:scale-105 transition-all duration-300 ease-in-out'>Leave a word</button>
                     </div>
                 </div>
-                <div className="mockup-window border text-gray-400 bg-[#25262A] mx-2 border-[#57c78e]">
+                <div data-aos="fade-left" className="mockup-window border text-gray-400 bg-[#25262A] mx-2 border-[#57c78e]">
                     {testimonials.length < 1 ?
                         <div className='h-[60vh]'>
                             <p className='text-gray-400 p-5 border-t border-[#57c78e]'>Looking forward to your testimonials!</p>
