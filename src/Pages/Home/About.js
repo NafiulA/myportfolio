@@ -5,17 +5,20 @@ const About = () => {
         <div id='aboutme' className='bg-[#25262A]'>
             <div className='min-h-screen w-full lg:w-3/4 mx-auto py-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
                 <div className='order-2 lg:order-1'>
-                    <div className='group h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
-                        <p className='text-white group-hover:text-[#57C78E] text-2xl p-5'>Front-end Development</p>
-                        <p className='text-sm text-gray-500 px-5 max-w-sm'>HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, ReactJS</p>
+                    <div className='group min-h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white group-hover:text-[#57C78E] text-2xl px-5 pt-5'>Front-end Technologies</p>
+                        <p className='px-5 pt-1 text-gray-400'>that I worked with</p>
+                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, ReactJS</p>
                     </div>
-                    <div className='group h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
-                        <p className='text-white group-hover:text-[#57c78e] text-2xl p-5'>Full-stack Development</p>
-                        <p className='text-sm text-gray-500 px-5 max-w-sm'>JavaScript, ReactJS, NodeJS, ExpressJS, MongoDB</p>
+                    <div className='group min-h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white group-hover:text-[#57c78e] text-2xl px-5 pt-5'>Back-end Technologies</p>
+                        <p className='px-5 pt-1 text-gray-400'>that I worked with</p>
+                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>NodeJS, ExpressJS, MongoDB, Firebase, JWT</p>
                     </div>
-                    <div className='group h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
-                        <p className='text-white group-hover:text-[#57c78e] text-2xl p-5'>Software Development</p>
-                        <p className='text-sm text-gray-500 px-5 max-w-sm'>Basic knowledge of C++, OOP, RDBMS, Networks</p>
+                    <div className='group min-h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
+                        <p className='text-white group-hover:text-[#57c78e] text-2xl px-5 pt-5'>Familiar Technologies</p>
+                        <p className='px-5 pt-1 text-gray-400'>that I have conceptual knowledge on or very little worked with</p>
+                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>C++, OOP, RDBMS, Computer Networks, Cryptography</p>
                     </div>
                 </div>
                 <div className='px-5 order-1 lg:order-2'>
