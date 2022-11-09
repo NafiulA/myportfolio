@@ -6,14 +6,11 @@ import "./Testimonial.css";
 import { useNavigate } from 'react-router-dom';
 
 const Testimonials = () => {
+    const loadingHeight="half";
     const navigate = useNavigate();
     const { data: testimonials, isLoading } = useQuery("testimonials", () =>
         fetch("https://blooming-badlands-86390.herokuapp.com/reviews").then(res => res.json())
     );
-
-    if (isLoading) {
-        return <Loading></Loading>
-    }
 
     return (
         <div id='testimonial' className='bg-[#2D2E32]'>
@@ -29,14 +26,15 @@ const Testimonials = () => {
                     </div>
                 </div>
                 <div data-aos="fade-left" className="mockup-window border text-gray-400 bg-[#25262A] mx-2 border-[#57c78e]">
-                    {testimonials.length < 1 ?
+                    {isLoading?<Loading loadingHeight={loadingHeight}></Loading>:
+                    (testimonials.length < 1 ?
                         <div className='h-[60vh]'>
                             <p className='text-gray-400 p-5 border-t border-[#57c78e]'>Looking forward to your testimonials!</p>
                         </div>
                         : <div className='testimonialWindow h-[60vh] overflow-y-auto'>
                             <div className="grid grid-cols-1 lg:grid-cols-2 p-2 gap-5 justify-items-center items-center border-t border-[#57c78E]">
                                 {testimonials.map(testimonial => <TestimonialCard key={testimonial._id} testimonial={testimonial}></TestimonialCard>)}
-                            </div></div>}
+                            </div></div>)}
                 </div>
             </div>
         </div>

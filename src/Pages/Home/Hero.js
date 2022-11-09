@@ -1,8 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import portfolio from "../../assets/images/portfolio.png";
 
 const Hero = () => {
+    const navigate = useNavigate();
     return (
         <div id='top' className='min-h-[90vh] bg-[#2D2E32]'>
             <div className='w-full md:w-4/5 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center'>
@@ -17,8 +19,17 @@ const Hero = () => {
                     <div className='mt-2 text-gray-400'>
                         <p className='py-5'>I build beautiful &#38; powerful web apps utilizing the technologies I keep learning everyday.</p>
                     </div>
-                    <div className='my-10'>
-                        <HashLink to="/home#contacts" className='text-2xl text-[#57C78E] border-b-2 max-w-fit border-[#57C78E] hover:scale-105 transition duration-150 ease-in cursor-pointer'>Let's chat</HashLink>
+                    <div className='my-10 flex flex-wrap gap-3'>
+                        <div>
+                        <button onClick={() => { navigate("/allprojects") }} className='p-2 text-[#57C78E] bg-[#25262A] text-2xl rounded-md flex items-center hover:bg-[#16191E] hover:text-white transition-all duration-300 ease-in-out'>
+                        <p>Check my projects </p>
+                        </button>
+                        </div>
+                        <div>
+                        <button className='p-2 text-[#57C78E] bg-[#25262A] text-2xl rounded-md flex items-center hover:bg-[#16191E] hover:text-white transition-all duration-300 ease-in-out'>
+                        <HashLink to="/home#contacts">Let's chat</HashLink>
+                        </button>
+                        </div>
                     </div>
                 </div>
                 <div className='order-1 lg:order-2'>

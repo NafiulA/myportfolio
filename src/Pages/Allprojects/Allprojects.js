@@ -5,7 +5,6 @@ import Loading from '../Shared/Loading';
 import ProjectsCard from './ProjectsCard';
 
 const Allprojects = () => {
-
     const { data: projects, isLoading } = useQuery("projects", () => fetch("https://blooming-badlands-86390.herokuapp.com/projects").then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>

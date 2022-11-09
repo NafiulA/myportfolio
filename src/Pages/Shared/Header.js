@@ -29,7 +29,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='https://drive.google.com/file/d/1RiooLzeBUX9_6rL8NuAi-Xmw_7P11KAN/view?usp=sharing' target="_blank" rel="noreferrer" className='bg-[#333438] flex items-center mr-3 p-2 text-xs lg:hidden rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
+                <a href='https://drive.google.com/file/d/1RLfHyQqH55A7V_8vNovmfMp1sGZ9De0u/view?usp=share_link' target="_blank" rel="noreferrer" className='bg-[#333438] flex items-center mr-3 p-2 text-xs lg:hidden rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
                     <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
                     <p className='pl-2'>My Resume</p>
                 </a>
@@ -61,7 +61,7 @@ const Header = () => {
                         <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
                         <p className='pl-2'>LinkedIn</p>
                     </a>
-                    <a href='https://drive.google.com/file/d/1RiooLzeBUX9_6rL8NuAi-Xmw_7P11KAN/view?usp=sharing' target="_blank" rel="noreferrer" className='bg-[#333438] flex items-center mr-5 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
+                    <a href='https://drive.google.com/file/d/1RLfHyQqH55A7V_8vNovmfMp1sGZ9De0u/view?usp=share_link' target="_blank" rel="noreferrer" className='bg-[#333438] flex items-center mr-5 p-2 rounded hover:bg-[#2D2E32] hover:text-[#57C78E] transition-all duration-500 ease-in-out'>
                         <FontAwesomeIcon icon={faFilePdf}></FontAwesomeIcon>
                         <p className='pl-2'>My Resume</p>
                     </a>
