@@ -9,7 +9,7 @@ const Testimonials = () => {
     const loadingHeight="half";
     const navigate = useNavigate();
     const { data: testimonials, isLoading } = useQuery("testimonials", () =>
-        fetch("https://blooming-badlands-86390.herokuapp.com/reviews").then(res => res.json())
+        fetch("https://nafiulalam.onrender.com/reviews").then(res => res.json())
     );
 
     return (

@@ -10,7 +10,7 @@ const useToken = user => {
             name: name
         };
         if (email) {
-            fetch("https://blooming-badlands-86390.herokuapp.com/user", {
+            fetch("https://nafiulalam.onrender.com/user", {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

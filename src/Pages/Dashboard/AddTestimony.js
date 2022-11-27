@@ -21,7 +21,7 @@ const AddTestimony = () => {
             email: user.email,
             testimony: data.testimony
         }
-        fetch("https://blooming-badlands-86390.herokuapp.com/reviews", {
+        fetch("https://nafiulalam.onrender.com/reviews", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",

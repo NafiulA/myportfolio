@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 
 const AdminDltModal = (dltModal, setDltModal, refetch) => {
     const handleDelete = () => {
-        fetch(`https://blooming-badlands-86390.herokuapp.com//admin/reviews/${dltModal._id}`, {
+        fetch(`https://nafiulalam.onrender.com//admin/reviews/${dltModal._id}`, {
             method: "DELETE",
             headers: {
                 "Content-type": "application/json",

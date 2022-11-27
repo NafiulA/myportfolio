@@ -9,7 +9,7 @@ import MyTestimonyDltModal from './MyTestimonyDltModal';
 const MyTestimonies = () => {
     const [dltModal, setDltModal] = useState(null);
     const [user, loading] = useAuthState(auth);
-    const { data: testimonies, isLoading, refetch } = useQuery("testimonies", () => fetch(`https://blooming-badlands-86390.herokuapp.com/reviews/${user.email}`, {
+    const { data: testimonies, isLoading, refetch } = useQuery("testimonies", () => fetch(`https://nafiulalam.onrender.com/reviews/${user.email}`, {
         headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`
         }
