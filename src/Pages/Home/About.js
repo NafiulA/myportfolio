@@ -13,12 +13,12 @@ const About = () => {
                     <div className='group min-h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
                         <p className='text-white group-hover:text-[#57c78e] text-2xl px-5 pt-5'>Back-end Technologies</p>
                         <p className='px-5 pt-1 text-gray-400 text-sm'>that I worked with</p>
-                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>NodeJS, ExpressJS, MongoDB, Firebase, JWT, NextJS</p>
+                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>JAVA, NodeJS, ExpressJS, MongoDB, Firebase, JWT, NextJS</p>
                     </div>
                     <div className='group min-h-40 w-full max-w-lg bg-[#2D2E32] rounded-md my-6 hover:-translate-y-3 transition-all duration-300 ease-in-out'>
                         <p className='text-white group-hover:text-[#57c78e] text-2xl px-5 pt-5'>Familiar Technologies</p>
-                        <p className='px-5 pt-1 text-gray-400 text-sm'>that I have conceptual knowledge on or very little worked with</p>
-                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>C++, OOP, SQL, Python, Computer Networks, Cryptography</p>
+                        <p className='px-5 pt-1 text-gray-400 text-sm'>that I have worked with or conceptual knowledge on</p>
+                        <p className='text-sm text-gray-300 px-5 py-5 max-w-sm'>AEM (Adobe Experience Manager), AWS, Apache Sling, JCR (Java Content Repository), XML, Python, Computer Networks, Cryptography</p>
                     </div>
                 </div>
                 <div className='px-5 order-1 lg:order-2'>
@@ -26,10 +26,11 @@ const About = () => {
                         <p className='text-gray-400 py-3'>Introduction</p>
                     </div>
                     <div>
-                        <p className='py-3 text-white text-4xl'>Hello! I'm Nafiul Alam</p>
+                        <p className='py-3 text-white text-4xl'>Hi! I'm Nafiul Alam</p>
                     </div>
-                    <div className='py-3 max-w-md text-gray-400 text-justify'>
-                        <p>Recently I graduated from Independent University, Bangladesh with a B.Sc in Electrical &#38; Electronics Engineering. From the introduction to programming in my junior year, i've been in love with programming. Since then, I've learnt C++, Python, Computer networking, Cryptography and most recently JavaScript. And little by little I've learnt to make a full-stack website utilizing the popular MERN stack technologies. Everyday I'm trying to learn something new and grow by experimenting. Now-a-days I'm looking for career opportunities in this vast IT field. If you find my works interesting and suitable for a full time position or even an internship  in your organization, please consider giving me a knock.</p>
+                    <div className='py-3 max-w-md text-gray-400 text-justify break-all'>
+                        <p>a System Engineer passionate about building scalable, user-focused web experiences. With over two years of professional experience in Japan, I specialize in front-end development and CMS/DXP solutions, particularly Adobe Experience Manager (AEM). Beyond implementation, I enjoy bridging ideas and execution: collaborating with directors, architects, and international teams to turn complex requirements into practical, maintainable solutions. I’m AWS Certified, an Adobe Certified AEM Developer, and continuously expanding my skills across cloud, backend, and modern JavaScript frameworks. I thrive in environments where I can keep learning, take ownership, and create meaningful digital experiences.
+                           <br /> Let’s build something impactful.</p>
                     </div>
                 </div>
             </div>

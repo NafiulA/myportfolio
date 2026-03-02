@@ -72,11 +72,11 @@ const Contact = () => {
                     </div>
                     <div className='bg-[#2D2E32] my-5 p-5 w-full flex items-center rounded-md text-xl text-white hover:text-[#57c78E] hover:-translate-y-2 hover:shadow-lg hover:shadow-[#57c78e]/50 transition-all duration-300 ease-in-out'>
                         <FontAwesomeIcon className='text-[#57c78e]' icon={faPhone}></FontAwesomeIcon>
-                        <a href='tel:+8801323845385' className='pl-3'>+880-1323-845385</a>
+                        <a href='tel:+8801323845385' className='pl-3'>+81 070-9152-2172</a>
                     </div>
                     <div className='bg-[#2D2E32] my-5 p-5 w-full flex items-center rounded-md text-xl text-white hover:text-[#57c78E] hover:-translate-y-2 hover:shadow-lg hover:shadow-[#57c78e]/50 transition-all duration-300 ease-in-out'>
                         <FontAwesomeIcon className='text-[#57c78e]' icon={faLocationCrosshairs}></FontAwesomeIcon>
-                        <p className='pl-3'>Dhaka, Bangladesh</p>
+                        <p className='pl-3'>Miyazaki, Japan</p>
                     </div>
                 </div>
             </div>
