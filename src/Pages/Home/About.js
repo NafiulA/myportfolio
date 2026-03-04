@@ -28,7 +28,7 @@ const About = () => {
                     <div>
                         <p className='py-3 text-white text-4xl'>Hi! I'm Nafiul Alam</p>
                     </div>
-                    <div className='py-3 max-w-md text-gray-400 text-justify break-all'>
+                    <div className='py-3 max-w-md text-gray-400 text-justify'>
                         <p>a System Engineer passionate about building scalable, user-focused web experiences. With over two years of professional experience in Japan, I specialize in front-end development and CMS/DXP solutions, particularly Adobe Experience Manager (AEM). Beyond implementation, I enjoy bridging ideas and execution: collaborating with directors, architects, and international teams to turn complex requirements into practical, maintainable solutions. I’m AWS Certified, an Adobe Certified AEM Developer, and continuously expanding my skills across cloud, backend, and modern JavaScript frameworks. I thrive in environments where I can keep learning, take ownership, and create meaningful digital experiences.
                            <br /> Let’s build something impactful.</p>
                     </div>
